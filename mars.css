@@ -184,12 +184,12 @@ button{
 }
 button.primary:focus{
     border: 2px dashed #f7a35b  ;
-    background: #26a69a ;
-    color: 4a4c55 ;
+    background: #0095a1 ;
+    color: #4a4c55 ;
 }
 button.secondary:focus{
-    border: 2px dashed 4a4c55 ;
-    color: 4a4c55 ;
+    border: 2px dashed #4a4c55 ;
+    color: #4a4c55 ;
     background: #0095a1 ;
 }
 button.alert:hover{
@@ -219,13 +219,11 @@ button.success:hover{
 }
 .tab.active{
     background: #0095a1;
-    color: #4a4c55;
-    border: solid;
+    color: #fff;
 }
 button.primary.tab:focus{
     background: #0095a1;
-    color: #4a4c55;
-    border: solid;
+    color: #fff;
 }
 .floattab{
     border-radius: 360px;
@@ -238,12 +236,12 @@ button.primary.tab:focus{
     margin: 2px;
 }
 .floattab.booknow{
-    background: 4a4c55;
-    color: 4a4c55;
+    background: #4a4c55;
+    color: #fff;
 }
 .floattab:hover{
     font-size: 24px;
-    color: wheat;
+    color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 @media (min-width: 700px) {
@@ -362,7 +360,7 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
   right: 0;
   top:0;
   bottom: 0;
-  background: 4a4c55;
+  background: #4a4c55;
   color: #FFF;
   width: inherit;
   height: inherit;
@@ -375,7 +373,7 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
     top: 0;
     left: 0;
     z-index: 10;
-    background: 4a4c55;
+    background: #4a4c55;
     color: #FFF;
     display: none;
 }
@@ -385,7 +383,7 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
   right: 0;
   top:0;
   bottom: 0;
-  background: 4a4c55;
+  background: #4a4c55;
   color: #FFF;
   width: 80%;
   height: 88%;
