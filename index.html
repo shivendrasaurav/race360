@@ -1,10 +1,11 @@
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <title>MARS</title>
-    <link href="mars.css" rel="stylesheet" type="text/css">
-    <script>
+    <head>
+        <title>RACE360</title>
+        <link href="mars.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="webicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Product+Sans" rel="stylesheet">        
+        <script>
          var counter=0;
         function sidenavfunc(){
             counter++;
@@ -35,130 +36,67 @@
         function closemodal(){
             document.getElementById("mod1").style.display=("none");
         }
-    </script>
-</head>
-<body onload="hidesidenav()">
-    <div class="topnav inverted" id="tm">
-        <button class="primary tab menu left">MARS</button>
-        <div class="dropdown_container right">
-            <button class="dropdown tab primary">Dropdown</button>
-            <div class="dropdown_content">
-                <a href="#"><button class="dropdown">LOREM</button></a>
-                <a href="#"><button class="dropdown">LOREM</button></a>
-                <a href="#"><button class="dropdown">LOREM</button></a>
-            </div>
-          </div>
-        <button class="primary tab menu right">Item 2</button>
-        <button class="primary tab menu right">Item 3</button>
-        <button class="primary tab menu right">Item 4</button>
-        <button class="primary tab menu right">Item 5</button>
-    </div>
-    <div class="sidenav inverted">
-        <div class="row">
-            <span class="left">&nbsp;&nbsp;</span><button id="switch" style="font-size:28px;" class="mico inverted left" onclick="sidenavfunc();">=</button>
-            <button class="mico right">MARS</button>
-        </div>
-        <div id="nav1">
-            <div class="mtab">Item 1</div><br>
-            <div class="mtab">Item 2</div><br>
-            <div class="mtab">Item 3</div><br>
-            <div class="mtab">Item 4</div><br>
-            <div class="mtab">Item 5</div><br>
-        </div>
-    </div>
-    <img onmouseout="colormenu()" onmouseover="decolormenu()" src="4k-wallpaper-blur-close-up-1629998.jpg" style="top:0; left: 0; width: 101%; height:101%; margin: -0.5%"/>
-    <h1>Input Controls : </h1>
-    <input type="text" /><br>
-    <label>Text </label><br>
-    <input type="number" /><br>
-    <label>Number </label><br>
-    <input type="password" /><br>
-    <label>Password </label><br>
-    <h4>Select A Date : </h4>
-    <select class="date">
-        <option>Day</option>
-        <option>Day</option>
-        <option>Day</option>
-    </select>&nbsp;&nbsp;
-    <select class="month">
-        <option>Month</option>
-        <option>Month</option>
-        <option>Month</option>
-    </select>&nbsp;&nbsp;
-    <select class="year">
-        <option>Year</option>
-        <option>Year</option>
-        <option>Year</option>
-    </select>
-    <h4>Checkboxes : </h4>
-    <div class="check">Checked : &nbsp;&nbsp;
-    <input type="checkbox" checked/>
-    <button class="checkmark">X</button>
-    </div><br>
-    <div class="check">Unchecked : &nbsp;&nbsp;
-    <input type="checkbox" />
-    <button class="checkmark">X</button>
-    </div>
-    <h4>Radio Buttons : </h4>
-    <div class="check">Checked : &nbsp;&nbsp;
-    <input type="radio" checked name="rad"/>
-    <button class="radiomark">X</button>
-    </div><br>
-    <div class="check">Unchecked : &nbsp;&nbsp;
-    <input type="radio"  name="rad"/>
-    <button class="radiomark">X</button>
-    </div>
-    <h4>Toggle Button : </h4>
-    <label>On : </label>
-    <div class="switch">
-    <input type="checkbox" checked/>
-    <span class="toggle"></span>
-    </div>
-    <label>Off : </label>
-    <div class="switch">
-    <input type="checkbox"/>
-    <span class="toggle"></span>
-    </div><br>
-    <h1>The Grid : </h1>
-    <div class="row">
-    <div class="col large3 medium6"><p>Lorem Ipsum Orem Dum Bum</p></div>
-    <div class="col large3 medium6"><p>Lorem Ipsum Orem Dum Bum</p></div>
-    <div class="col large3 medium6"><p>Lorem Ipsum Orem Dum Bum</p></div>
-    <div class="col large3 medium6"><p>Lorem Ipsum Orem Dum Bum</p></div>
-    </div>
-    <div class="row">
-    <div class="col large3 medium4"><P>Lorem Ipsum Orem Dum Bum</p></div>
-    <div class="col large6 medium8"><p>Lorem Ipsum Orem Dum Bum Even More Random Text Incoming</p></div>
-    <div class="col large3 medium4"><p>Lorem Ipsum Orem Dum Bum</p></div>
-    </div>
-    <div class="row">
-    <div class="col large8 medium6"><p>Lorem Ipsum Orem Dum Bum Even More Random Text Incoming And It Will Take More Space Than Before Also, It's Gonna Be Too Much Of Space</p></div>
-    <div class="col large4 medium6"><p>Lorem Ipsum Orem Dum Bum</p></div>
-    </div>
-    <div class="row">
-    <div class="col large12 medium12"><p>Lorem Ipsum Orem Dum Bum Even More Random Text Incoming And It Will Take More Space Than Before Also, It's Gonna Be Too Much Of Space</p></div>
-    </div>
-    <div class="row">
-        <div class="col large3 medium4"><p><button class="small primary">Small</button></p></div>
-        <div class="col large3 medium4"><p><button class="large secondary">Large</button></p></div>
-        <div class="col large3 medium4"><p><button class="small circular alert">Small Circular</button></p></div>
-        <div class="col large3 medium4"><p><button class="large circular success">Large Circular</button></p></div>
-    </div>
-    <h1>Overlay and Modals</h1>
-    <div class="overlaycontainer">
-      <img class="person polaroid"/>
-      <div class="overlay">
-        <h2 style="text-align:center;">This Is An Overlay</h2>
-      </div>
-    </div><br>
-    <button class="small primary" onclick="openmodal();">Click To Open Modal</button>
-    <div class="modalcontainer" id="mod1">
-      <div class="modal">
-        <h1 style="text-align:center">MODAL<button class="alert right small" onclick="closemodal();">X</button>
-      </h1>
-      </div>
-    </div>
-
-
-</body>
+        </script>
+        <style>
+            .tab.menu{width:128px; font-size: 15px;}
+        </style>
+    </head>
+    
+    <body>
+        <section id="navigation_bars">
+                <div id=tm class="topnav lite" onmouseover="colormenu()" onmouseout="decolormenu()">
+                        <div style="font-size: 44px; margin-top:-2px;" class="primary left">RACE360</div>
+                        <button class="menu tab primary right">Contact Us</button>
+                        <div class="dropdown_container right">
+                                <button class="dropdown tab primary">Hackathons</button>
+                                <div class="dropdown_content">
+                                    <a href="#"><button class="dropdown">Artificial Intelligence</button></a>
+                                    <a href="#"><button class="dropdown">Cyber Security</button></a>
+                                </div>
+                        </div>
+                        <button class="menu tab primary right">Schedule</button>
+                        <button class="menu tab primary right">Speakers</button>
+                        <div class="dropdown_container right">
+                                <button class="dropdown tab primary">Tracks</button>
+                                <div class="dropdown_content">
+                                    <a href="#"><button class="dropdown">Artificial Intelligence</button></a>
+                                    <a href="#"><button class="dropdown">Cyber Security</button></a>
+                                    <a href="#"><button class="dropdown">Internet Of Things</button></a>
+                                </div>
+                        </div>
+                      <button class="menu tab primary right">About RACE360</button>
+                    </div>
+                    
+                <div id="tm" class="sidenav lite">
+                        <div class="row">
+                                <div style="font-size: 44px; margin-top:-2px;" class="left">RACE360</div>
+                                <button id="switch" style="font-size:28px;" class="mico right" onclick="sidenavfunc();">=</button>
+                            </div>
+                            <div id="nav1">
+                                <div class="mtab" onclick="sidenavfunc();">About RACE360</div><br>
+                                <div class="dropdown_container">
+                                    <div class="mtab">Tracks</button>
+                                        <div class="dropdown_content">
+                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Artificial Intelligence</button></a>
+                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Cyber Security</button></a>
+                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Internet Of Things</button></a>
+                                        </div>
+                                    </div><br>
+                                </div>
+                                <div class="mtab" onclick="sidenavfunc();">Speakers</div><br>
+                                <div class="mtab" onclick="sidenavfunc();">Schedule</div><br>
+                                <div class="dropdown_container">
+                                    <div class="mtab">Hackathons</button>
+                                        <div class="dropdown_content">
+                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Artificial Intelligence</button></a>
+                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Cyber Security</button></a>
+                                        </div>
+                                    </div><br>
+                                </div>
+                                <div class="mtab" onclick="sidenavfunc();">Contact Us</div><br>
+                            </div>
+                    
+                </div>    
+        </section>
+    </body>
 </html>

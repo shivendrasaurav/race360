@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     transition: 300ms;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Product Sans', Calibri;
 }
 
 body{ background: #fdfde8; }
@@ -210,15 +210,14 @@ button.success:hover{
 .tab{
     border-radius: 0;
     border: none;
-    min-width:160px;
+    width:140px;
     height: 50px;
-    font-size: 24px;
 }
 .tab:hover{
-    border: 2px dashed #0095a1;
+    border: 2px dashed #000;
 }
 .tab.active{
-    background: #0095a1;
+    background: #000;
     color: #fff;
 }
 button.primary.tab:focus{
@@ -249,13 +248,14 @@ button.primary.tab:focus{
         position: fixed;
         top:0;
         z-index: 9;
-        margin-left: -1%;
-        width: 100.38%;
+        left:0;
+        width: 100%;
         background: transparent;
         height: 60px;
         padding-top: 5px;
     }
-    .tab.menu,.dropdown.tab{color: #FFF; background: transparent;}
+    .tab.menu,.dropdown.tab{color: #000; background: transparent;}
+
     .sidenav{display: none;}
     .floatnav{
         position : fixed;
@@ -398,7 +398,7 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
     border-radius: 0;
     min-width:160px;
     height: 50px;
-    font-size: 24px;
+    font-size: 16px;
 }
 .dropdown:hover{
     border:dashed 2px;
