@@ -18,6 +18,20 @@ body{ background: #fdfde8; }
     margin: -0.5%;
 }
 
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+h1.title{width:80%; display: block; margin: auto;}
+.callout{
+    width: 80%;
+    display: block;
+    margin:auto;
+    padding: 6px;
+}
 .right{float: right;}
 .left{float: left;}
 .row{
@@ -27,6 +41,7 @@ body{ background: #fdfde8; }
     overflow-y: hidden;
 }
 
+.jumbotron{font-size: 72px;}
 .col{display: inline-block;}
 
 @media (max-width: 500px) {
@@ -36,6 +51,7 @@ body{ background: #fdfde8; }
         height: auto;
         margin:-2%;
     }
+    .jumbotron{font-size: 48px;}
 }
 
 @media (min-width: 501px) and (max-width: 1000px) {
