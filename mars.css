@@ -6,7 +6,7 @@
 
 body{ background: #fdfde8; }
 
-.lite{background: #DDD; color: #4a4c55;}
+.lite{background: linear-gradient(to bottom right, #B7B8B9, #D1D2D3); color: #4a4c55;}
 .inverted{background: #4a4c55; color: #FFF;}
 .primary{ background: #f7a35b ; color: #FFF; }
 .secondary{ background: #0095a1; color: #FFF; }
