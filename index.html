@@ -36,32 +36,57 @@
         function closemodal(){
             document.getElementById("mod1").style.display=("none");
         }
+        function showaitrack(){
+            document.getElementById("cstrack").style.display=("none");
+            document.getElementById("iottrack").style.display=("none");
+            document.getElementById("aitrack").style.display=("block");
+        }
+        function showcstrack(){
+            document.getElementById("cstrack").style.display=("block");
+            document.getElementById("iottrack").style.display=("none");
+            document.getElementById("aitrack").style.display=("none");
+        }
+        function showiottrack(){
+            document.getElementById("cstrack").style.display=("none");
+            document.getElementById("iottrack").style.display=("block");
+            document.getElementById("aitrack").style.display=("none");
+        }
+        function showaihack(){
+            document.getElementById("cshackathon").style.display=("none");
+            document.getElementById("aihackathon").style.display=("block");
+        }
+        function showcshack(){
+            document.getElementById("cshackathon").style.display=("block");
+            document.getElementById("aihackathon").style.display=("none");
+        }
         </script>
         <style>
             .tab.menu{width:128px; font-size: 15px;}
+            #tracks{background: linear-gradient(to bottom right, #C1C1C1, #FFFFFF);}
+            #hackathons{background: linear-gradient(to bottom right, #C1C1C1, #FFFFFF);}
         </style>
     </head>
     
-    <body>
+    <body onload="showaitrack(); showaihack();">
         <section id="navigation_bars">
                 <div id=tm class="topnav lite" onmouseover="colormenu()" onmouseout="decolormenu()">
-                        <div style="font-size: 44px; margin-top:-2px;" class="primary left">RACE360</div>
-                        <button class="menu tab primary right">Contact Us</button>
+                        <a href="#cover"><div style="font-size: 44px; margin-top:-2px; margin-left:24px;" class="primary left">RACE360</div></a>
+                        <a href="#contact"><button class="menu tab primary right">Contact Us</button></a>
                         <div class="dropdown_container right">
-                                <button class="dropdown tab primary">Hackathons</button>
+                                <a href="#hackathons"><button class="dropdown tab primary">Hackathons</button></a>
                                 <div class="dropdown_content">
-                                    <a href="#"><button class="dropdown">Artificial Intelligence</button></a>
-                                    <a href="#"><button class="dropdown">Cyber Security</button></a>
+                                    <a href="#hackathons"><button class="dropdown" onclick="showaihack();">Artificial Intelligence</button></a>
+                                    <a href="#hackathons"><button class="dropdown" onclick="showcshack();">Cyber Security</button></a>
                                 </div>
                         </div>
-                        <button class="menu tab primary right">Schedule</button>
-                        <button class="menu tab primary right">Speakers</button>
+                        <a href="#schedule"><button class="menu tab primary right">Schedule</button></a>
+                        <a href="#speakers"><button class="menu tab primary right">Speakers</button></a>
                         <div class="dropdown_container right">
-                                <button class="dropdown tab primary">Tracks</button>
+                                <a href="#tracks"><button class="dropdown tab primary">Tracks</button></a>
                                 <div class="dropdown_content">
-                                    <a href="#"><button class="dropdown">Artificial Intelligence</button></a>
-                                    <a href="#"><button class="dropdown">Cyber Security</button></a>
-                                    <a href="#"><button class="dropdown">Internet Of Things</button></a>
+                                    <a href="#tracks"><button class="dropdown" onclick="showaitrack();">Artificial Intelligence</button></a>
+                                    <a href="#tracks"><button class="dropdown" onclick="showcstrack();">Cyber Security</button></a>
+                                    <a href="#tracks"><button class="dropdown" onclick="showiottrack();">Internet Of Things</button></a>
                                 </div>
                         </div>
                       <a href="#about"><button class="menu tab primary right">About RACE360</button></a>
@@ -69,44 +94,44 @@
                     
                 <div id="tm" class="sidenav lite">
                         <div class="row">
-                                <div style="font-size: 44px; margin-top:-2px;" class="left">RACE360</div>
+                                <a href="#cover"><div style="font-size: 44px; margin-top:-2px;" class="left">RACE360</div></a>
                                 <button id="switch" style="font-size:28px;" class="mico right" onclick="sidenavfunc();">=</button>
                             </div>
                             <div id="nav1">
-                                <div class="mtab" onclick="sidenavfunc();">About RACE360</div><br>
+                                <a href="#about"><div class="mtab" onclick="sidenavfunc();">About RACE360</div></a><br>
                                 <div class="dropdown_container">
-                                    <div class="mtab">Tracks</button>
+                                    <a><div class="mtab">Tracks
                                         <div class="dropdown_content">
-                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Artificial Intelligence</button></a>
-                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Cyber Security</button></a>
-                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Internet Of Things</button></a>
+                                            <a href="#tracks"><button onclick="sidenavfunc(); showaitrack();" class="dropdown">Artificial Intelligence</button></a>
+                                            <a href="#tracks"><button onclick="sidenavfunc(); showcstrack();" class="dropdown">Cyber Security</button></a>
+                                            <a href="#tracks"><button onclick="sidenavfunc(); showiottrack();" class="dropdown">Internet Of Things</button></a>
                                         </div>
-                                    </div><br>
+                                    </div></a><br>
                                 </div>
-                                <div class="mtab" onclick="sidenavfunc();">Speakers</div><br>
-                                <div class="mtab" onclick="sidenavfunc();">Schedule</div><br>
+                                <a href="#speakers"><div class="mtab" onclick="sidenavfunc();">Speakers</div></a><br>
+                                <a href="#schedule"><div class="mtab" onclick="sidenavfunc();">Schedule</div></a><br>
                                 <div class="dropdown_container">
-                                    <div class="mtab">Hackathons</button>
+                                    <a><div class="mtab">Hackathons
                                         <div class="dropdown_content">
-                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Artificial Intelligence</button></a>
-                                            <a href="#"><button onclick="sidenavfunc();" class="dropdown">Cyber Security</button></a>
+                                            <a href="#hackathons"><button onclick="sidenavfunc(); showaihack();" class="dropdown">Artificial Intelligence</button></a>
+                                            <a href="#hackathons"><button onclick="sidenavfunc(); showcshack();" class="dropdown">Cyber Security</button></a>
                                         </div>
-                                    </div><br>
+                                    </div></a><br>
                                 </div>
-                                <div class="mtab" onclick="sidenavfunc();">Contact Us</div><br>
+                                <a href="#contact"><div class="mtab" onclick="sidenavfunc();">Contact Us</div></a><br>
                             </div>
                     
                 </div>    
         </section>
 
-        <section id="cover" class="fullscreen">
+        <section id="cover" class="fullscreen" onmouseover="decolormenu();">
             <div class="middle">
-                <h1 class="jumbotron">RACE360</h1>
-                <h1>The Date</h1>
+                <div class="jumbotron">RACE360</div>
+                <div style="font-size:24px;">An Emerging Technologies Conference<br>29th June, 2019</div>
             </div>
         </section>
-<br><br>
-        <section id="about" class="fullscreen inverted">
+        <br><br>
+        <section id="about" class="fullscreen inverted" onmouseover="colormenu();">
             <br><br><br><br>
             <h1 class="jumbotron title">RACE360</h1>
             <p class="callout" style="font-size: 20px;">
@@ -114,6 +139,197 @@
                 <br><br>The Emerging Technology Conference explores tomorrow's technologies that are shaping the world and human race at large. This conference will bring perspectives on how cutting-edge technologies like cognitive computing, artificial intelligence, Block chain, Security, Augmented Reality, Edge Computing and finally a connected world will create a better future for humanity.
                 <br><br>The technology trends in the below areas are the theme for RACE 360 -2019 TechCon.
             </p>
+        </section>
+        <br><br>
+        <section id="tracks" class="fullscreen" onmouseover="colormenu();">
+            <br><br><br><br>
+            <h1 class="jumbotron title">Tracks</h1><br>
+            <div class="callout">
+                    <button class="secondary small col tab" onclick="showaitrack();" style="width:auto;">Artificial Intelligence</button>
+                    <button class="secondary small col tab" onclick="showcstrack();">Cyber Security</button>
+                    <button class="secondary small col tab" onclick="showiottrack();" style="width:auto;">Internet Of Things</button>
+                    <br><br>
+                    <div id="aitrack">
+                        <h1>Artificial Intelligence</h1>
+                        <p style="font-size: 20px">
+                                Artificial Intelligence (AI) is arguably the most revolutionary technology in several decades that would completely turn the world upside down and then shape it along with new contours. AI will reinvent everything from the nature of work to our modes of communication and transportation. It was reported that AI would be among the highest paying jobs and big companies would opt for AI reskilling. 
+                        </p>
+                    </div>
+
+                    <div id="cstrack">
+                            <h1>Cyber Security</h1>
+                            <p style="font-size: 20px">
+                                    From costly data breaches to paralyzing malicious attacks, businesses are racing to keep pace with the evolving complexity and sophistication of cyber threats. Increase in new technologies and new devices and possibilities of monetization etc have lead to the rise in these threats. The rapid evolution of Cybersecurity threats means professionals in the field-and those eager to join them-need to be up-to-date on the latest skills, strategies, and job opportunities in order to remain competitive.
+                            </p>
+                    </div>
+
+                    <div id="iottrack">
+                            <h1>Internet Of Things</h1>
+                            <p style="font-size: 20px">
+                                    AI and IoT will increasingly converge at edge computing. Most Cloud-trained models will be put at the edge layer. Doing this computing closer to the edge of the network lets organizations analyze important data in near real-time - a need of organizations across many industries, including manufacturing, health care, telecommunications and finance. For enterprises, IoT is all set to emerge as the principal driver of AI. Most Edge devices will be embedded with specially designed AI chips.
+                            </p>
+                    </div>
+            </div>    
+        </section>
+        <br><br>
+        <section id="speakers" class="fullscreen" onmouseover="colormenu();">
+            <br><br><br><br>
+            <h1 class="jumbotron title">Speakers</h1>
+            <div class="row" style="width:80%;">
+                <div class="overlaycontainer">
+                    <img class="person polaroid" src="spkimg/demospeaker.png"/>
+                        <div class="overlay">
+                            <h2 style="text-align:center;">Speaker 1</h2>
+                        </div>
+                  </div>
+                <div class="overlaycontainer">
+                    <img class="person polaroid" src="spkimg/demospeaker.png"/>
+                        <div class="overlay">
+                            <h2 style="text-align:center;">Speaker 2</h2>
+                        </div>
+                  </div>
+                <div class="overlaycontainer">
+                    <img class="person polaroid" src="spkimg/demospeaker.png"/>
+                        <div class="overlay">
+                            <h2 style="text-align:center;">Speaker 3</h2>
+                        </div>
+                  </div>
+            </div>
+            <div class="row" style="width:80%;">
+                <div class="overlaycontainer">
+                    <img class="person polaroid" src="spkimg/demospeaker.png"/>
+                        <div class="overlay">
+                            <h2 style="text-align:center;">Speaker 4</h2>
+                        </div>
+                  </div>
+                <div class="overlaycontainer">
+                    <img class="person polaroid" src="spkimg/demospeaker.png"/>
+                        <div class="overlay">
+                            <h2 style="text-align:center;">Speaker 5</h2>
+                        </div>
+                  </div>
+                <div class="overlaycontainer">
+                    <img class="person polaroid" src="spkimg/demospeaker.png"/>
+                        <div class="overlay">
+                            <h2 style="text-align:center;">Speaker 6</h2>
+                        </div>
+                  </div>
+            </div>
+        </section>
+        <br><br>
+        <section id="schedule" class="fullscreen" onmouseover="colormenu();">
+            <br><br><br><br>
+            <h1 class="jumbotron title">Schedule</h1>
+            <div class="callout" style="overflow-x: auto;">
+                <table>
+                    <tr>
+                        <th class="primary">Time</th>
+                        <th class="primary">Main Auditorium</th>
+                        <th class="primary"></th>
+                        <th class="primary">Hall 1</th>
+                        <th class="primary"></th>
+                    </tr>
+                    <tr>
+                        <td>10AM</td>
+                        <td>Key Note Speaker 1</td>
+                        <td>Speaker TBD</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>11AM</td>
+                        <td>Key Note Speaker 2</td>
+                        <td>Speaker TBD</td>
+                        <td>Cybersecurity for Future</td>
+                        <td>Sridhar, Wipro</td>
+                    </tr>
+                    <tr>
+                        <td>12AM</td>
+                        <td>Big Data, AI and Singularity</td>
+                        <td>Sameer Dhanrajani, Fractal</td>
+                        <td>NOC to SOC to SOAR</td>
+                        <td>Speaker TBD</td>
+                    </tr>
+                    <tr>
+                        <td>01PM</td>
+                        <td>Lunch Break</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02PM</td>
+                        <td>AI Use Cases</td>
+                        <td>Deep Thomas, Aditya Birla</td>
+                        <td>Edge Computing - Trends</td>
+                        <td>Speaker TBD</td>
+                    </tr>
+                    <tr>
+                        <td>03PM</td>
+                        <td>Unmanned Drones and Humanity</td>
+                        <td>Nihar Vartak</td>
+                        <td>AR and VR - New Reality</td>
+                        <td>Speaker TBD</td>
+                    </tr>
+                    <tr>
+                        <td>04PM</td>
+                        <td>Cognitive Oraganizations</td>
+                        <td>Dr. Gopal Pingali, IBM</td>
+                        <td>5G, IoT and Block Chain coming Together</td>
+                        <td>Speaker TBD</td>
+                    </tr>
+                    <tr>
+                        <td>05PM</td>
+                        <td>Smart Cities and Connected World</td>
+                        <td>Speaker TBD</td>
+                        <td>Block Chain and Better Governance</td>
+                        <td>Speaker TBD</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <br><br>
+        <section id="hackathons" class="fullscreen" onmouseover="colormenu();">
+                <br><br><br><br>
+                <h1 class="jumbotron title">Hackathons</h1>
+                <div class="callout">
+                    <button class="secondary small col tab" onclick="showaihack();">AI Challenge</button>
+                    <button class="secondary small col tab" onclick="showcshack();">Cyber Challenge</button>
+                    <br><br>
+                    <div id="aihackathon">
+                        <h1>AI Challenge</h1>
+                        <p style="font-size: 20px">
+                                Artificial Intelligence (AI) is arguably the most revolutionary technology in several decades that would completely turn the world upside down and then shape it along with new contours. AI will reinvent everything from the nature of work to our modes of communication and transportation. It was reported that AI would be among the highest paying jobs and big companies would opt for AI reskilling. 
+                        </p>
+                    </div>
+
+                    <div id="cshackathon">
+                            <h1>Cyber Challenge</h1>
+                            <p style="font-size: 20px">
+                                    From costly data breaches to paralyzing malicious attacks, businesses are racing to keep pace with the evolving complexity and sophistication of cyber threats. Increase in new technologies and new devices and possibilities of monetization etc have lead to the rise in these threats. The rapid evolution of Cybersecurity threats means professionals in the field-and those eager to join them-need to be up-to-date on the latest skills, strategies, and job opportunities in order to remain competitive.
+                            </p>
+                    </div>
+
+            </div>   
+        </section>
+        <br><br>
+        <section id="contact" class="fullscreen secondary" onmouseover="colormenu();">
+            <br><br><br><br>
+            <h1 class="jumbotron title">Get In Touch</h1><br><br>
+            <div class="callout">
+                <div class="col large6">
+                    <a href="mailto:someone@example.com"><button class="inverted large polaroid" style="width:80%;">Send Us Your Queries</button></a>
+                    <br><br><h1 class="title">Follow Us On</h1>
+                    <h1 class="title">Social Media Handles Here</h1><br><br><br>
+                </div>
+                <div class="col large6">
+                    <iframe class="polaroid" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15542.89373821591!2d77.6346617!3d13.1166989!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdee225fe28f600f6!2sREVA+University!5e0!3m2!1sen!2sin!4v1522677320198" style="border: none; border-radius:10px; height: 50%; width: 100%; " allowfullscreen="yes"></iframe>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                &copy; RACE 2019
+            </div>
         </section>
     </body>
 </html>
