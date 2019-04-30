@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     transition: 300ms;
-    font-family: 'Product Sans', Calibri;
+    font-family: 'San Francisco', 'Product Sans', Calibri;
 }
 
 body{ background: #fdfde8; }
@@ -25,7 +25,7 @@ body{ background: #fdfde8; }
     transform: translate(-50%, -50%);
     text-align: center;
 }
-h1.title{width:80%; display: block; margin: auto;}
+div.title{width:80%; display: block; margin: auto;}
 .callout{
     width: 80%;
     display: block;
